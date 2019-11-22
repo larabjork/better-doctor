@@ -26,3 +26,15 @@ $(document).ready(function() {
 
   });
 });
+
+
+// doctorList.data[0].profile.first_name
+// doctorList.data[0].profile.last_name
+// doctorList.data[0].practices[0].accepts_new_patients //for true/false of accepting new accepts_new_patients
+// doctorList.data[0].practices[0].name //for name of practice, not doctor
+// doctorList.data[0].practices[0].visit_address.street
+// doctorList.data[0].practices[0].visit_address.city
+// doctorList.data[0].practices[0].visit_address.state
+// doctorList.data[0].practices[0].visit_address.zip
+// doctorList.data[0].practices[0].phones[0].number
+// doctorList.data[0].practices[1].website
