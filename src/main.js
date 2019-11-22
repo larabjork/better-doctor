@@ -13,12 +13,13 @@ $(document).ready(function() {
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);
       let response = await mySymptoms.apiSymptoms(inputtedSymptom);
-      console.log("front end check");
+      console.log(response);
       getElements(response);
     })();
 
     function getElements(response) {
-      $('.confirm-symptom').text(`Sorry to hear that you're experiencing this symptom: ${response.data.name}`);
+      $('.confirm-symptom').text(`Sorry to hear that you're experiencing this symptom: ${response.data[0].name}`);
+      console.log(response);
     }
 
   });
