@@ -14,3 +14,5 @@ import './styles.css';
 //     });
 //   });
 // });
+
+var beverage = $("#beverage").val();

@@ -19,7 +19,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Ping Pong', //make sure to update this entry with actual title
+      title: 'Better Doctor',
       template: './src/index.html',
       inject: 'body'
     })
