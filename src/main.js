@@ -11,13 +11,6 @@ $(document).ready(function() {
     const inputtedSymptom = $("#symptom").val();
     $('#symptom').val("");
 
-    let symptomList= new Array
-    ("sniffles", "sneezes", "scrapes");
-    console.log(symptomList);
-    for (let i=0; i<symptomList.length; i++)
-    {
-      $('#symptom').append(symptomList[i]);
-    }
 
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);
