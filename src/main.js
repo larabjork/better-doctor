@@ -11,23 +11,15 @@ $(document).ready(function() {
     $('#symptom').val("");
 
     (async () => {
-         let mySymptoms = new Symptoms(inputtedSymptom);
-         let response = await mySymptoms.apiSymptoms(name);
-         // if (response.error) {
-         //   showError(response)
-         //   console.log(response);
-         // } else {
-         //   console.log(response);
-         getElements(response);
-       })();
+      let mySymptoms = new Symptoms(inputtedSymptom);
+      let response = await mySymptoms.apiSymptoms(inputtedSymptom);
+      console.log("front end check");
+      getElements(response);
+    })();
 
-      function getElements(response) {
-         $('.confirm-symptom').text(`Sorry to hear that you're experiencing this symptom: ${response.data.name}`);
-         // $('.showTotal').text(`The total number of nonstolen bikes in your area is ${response.non}`);
-       }
+    function getElements(response) {
+      $('.confirm-symptom').text(`Sorry to hear that you're experiencing this symptom: ${response.data.name}`);
+    }
 
-       // function showError(response) {
-       // $('.showErrors').text(`I'm sorry, Dave, I don't think I can do that because:  ${response.error}`);
-       // };
   });
 });
