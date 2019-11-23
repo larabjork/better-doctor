@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     function getElements(response) {
       let myArray = response;
-      console.log(myArray);
+      console.log(myArray);//this displays, but not the next console log, so focus here.
       for (let i = 0; i < myArray.length; i++) {
         let doctorName = myArray.data[i].profile.first_name;
         console.log(doctorName);
@@ -29,7 +29,7 @@ $(document).ready(function() {
         $('#first-name').html(doctorName);
       }
     };
-    $('.confirm-symptom').text(`Sorry to hear that you're experiencing ${inputtedSymptom}. These medical practitioners have the skills to help you with that.`);
+    $('.confirm-symptom').text(`Sounds like you're looking for help with ${inputtedSymptom}. These medical practitioners have the skills to help you with that.`);
   });
 });
 

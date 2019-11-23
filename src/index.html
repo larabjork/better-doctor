@@ -7,17 +7,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hey Portland! Not Feeling Your Best? BetterDoctor Can Help!</h1>
-      <p>We can help you find a doctor within 15 miles of Portland to see you through whatever you're experiencing. Whether you have an urgent problem, a chronic condition that you want advice about, or just a general physical exam, we can help you find a nearby doctor.</p>
+      <h1>Not Feeling Your Best, Fellow Portlander? <br>BetterDoctor Can Help!</h1>
+      <p>Have an urgent problem? Living with a chronic condition? Need a general physical exam? BetterDoctor is here for you.</p>
+      <p>We can help you find a doctor within 15 miles of Portland to see you through whatever you're experiencing. </p>
+      <!-- if able to, offer option to change distance from Portland, and revise text accordingly. -->
         <form class="symptom-form">
-          <h3>Tell us what's going on.</h3>
+          <h3>First, tell us what's going on.</h3>
             <label for="symptom"></label>
             <input id="symptom">
-
           <button type="submit" name="button">Submit</button>
+          <br>
+          <br>
+          <!-- goal here: allow users to select from a limited number of symptoms that match the overall from API. if they don't find what they want, offer full list? Also, hide the input box etc. once submitted. -->
         </form>
 
         <div class="confirm-symptom"></div>
+        <!-- goal here: present list of doctors, if I can ever get array to behave correctly. also, have error message for "looks like we didn't find someone that fits all your parameters. Would you like to try again, with a larger geographic range and/or symptom?" -->
         <!-- <div class="doctor-list">First name: <span id="first-name"></span> -->
 
 
