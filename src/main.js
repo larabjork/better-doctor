@@ -18,8 +18,25 @@ $(document).ready(function() {
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);
       let response = await mySymptoms.apiSymptoms(inputtedSymptom);
-      getElements(response);
+      let cleanResponse = cleanUpJSON(response);
+      console.log(cleanResponse);
+      getElements(cleanResponse);
     })();
+
+    function cleanUpJSON(response) {
+      let cleanResponse = response;
+      for (let m = 0; m < cleanResponse.data.length; m++) {
+        if (response.data[m].practices[0].accepts_new_patients === true) {
+          cleanResponse.data[m].practices[0].accepts_new_patients = "Yes"
+        } else if (response.data[m].practices[0].accepts_new_patients === false) {
+        cleanResponse.data[m].practices[0].accepts_new_patients = "No"
+      } else {};
+      if (response.data[m].practices[0].website === undefined) {
+        cleanResponse.data[m].practices[0].website = ""
+      }
+    };
+    return cleanResponse;
+  }
 
     function getElements(response) {
       let table = document.createElement("table");
