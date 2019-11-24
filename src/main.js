@@ -37,7 +37,6 @@ $(document).ready(function() {
         let phone = response.data[m].practices[0].phones[0].number;
         let cleanPhone = formatPhoneNumber(phone);
         cleanResponse.data[m].practices[0].phones[0].number = cleanPhone
-
       };
       return cleanResponse;
     }
@@ -86,10 +85,10 @@ $(document).ready(function() {
               cell.innerHTML = response.data[i].practices[0].phones[0][headers[l]];
             }
       }
-      console.log(table);
-      let el = document.getElementById("results");
-      el.innerHTML = "";
-      el.appendChild(table);
+
+      let resultsTable = document.getElementById("results");
+      resultsTable.innerHTML = "";
+      resultsTable.appendChild(table);
       };
     });
   });

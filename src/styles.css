@@ -2,7 +2,7 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-h1, h3 {
+h1,h2,h3 {
   font-family: 'Noto Sans TC', sans-serif;
   color: #8C5383;
   font-weight: bold;
@@ -14,6 +14,12 @@ h1{
   margin-left: 20%;
   margin-right: 20%;
 }
+
+h2{
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
 h3 {
   padding-top: 20px;
   padding-bottom: 16px;
@@ -32,4 +38,8 @@ p {
 
 .afterSubmit {
   display: none;
+}
+
+table {
+  font-size: 14px;
 }
