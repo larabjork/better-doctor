@@ -7,10 +7,10 @@
   </head>
   <body>
     <div class="container">
-      <h1>Not Feeling Your Best, Fellow Portlander? <br>BetterDoctor Can Help!</h1>
-      <p>Have an urgent problem? Living with a chronic condition? Need a general physical exam? BetterDoctor is here for you.</p>
-      <p>We can help you find a doctor within 15 miles of Portland to see you through whatever you're experiencing. </p>
-      <!-- if able to, offer option to change distance from Portland, and revise text accordingly. -->
+      <div class="intro">
+        <h1>Not Feeling Your Best, Fellow Portlander? <br>BetterDoctor Can Help!</h1>
+        <p>Have an urgent problem? Living with a chronic condition? Need a general physical exam? BetterDoctor is here for you.</p>
+        <p>We can help you find a doctor within 15 miles of Portland to see you through whatever you're experiencing. </p>
         <form class="symptom-form">
           <h3>First, tell us what's going on.</h3>
           <select id="symptom">
@@ -22,29 +22,28 @@
           <button type="submit" name="button">Submit</button>
           <br>
           <br>
-          <!-- goal here: allow users to select from a limited number of symptoms that match the overall from API. if they don't find what they want, offer full list? Also, hide the input box etc. once submitted. -->
         </form>
+      </div>
+
+      <div class="afterSubmit">
+        <h3>Here are nearby practitioners who can help.</h3>
+        <table id="results" style="width:100%">
+          <!-- <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Accepting New Patients?</th>
+          <th>Practice Name</th>
+          <th>Street Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr> -->
+        </table>
+      </div>
 
 
-          <table id="results" style="width:100%">
-            <!-- <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Accepting New Patients?</th>
-              <th>Practice Name</th>
-              <th>Street Address</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Phone</th>
-              <th>Website</th>
-            </tr> -->
-          </table>
-
-
-
-
-        </div>
 
 
 

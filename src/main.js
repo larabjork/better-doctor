@@ -11,6 +11,9 @@ $(document).ready(function() {
     const inputtedSymptom = $("#symptom").val();
     $('#symptom').val("");
 
+    $('.intro').hide();
+    $('.afterSubmit').show();
+
 
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);

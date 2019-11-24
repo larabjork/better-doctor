@@ -6,13 +6,13 @@ h1, h3 {
   font-family: 'Noto Sans TC', sans-serif;
   color: #8C5383;
   font-weight: bold;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 
 h1{
   padding-top: 60px;
   padding-bottom: 48px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 h3 {
   padding-top: 20px;
@@ -23,4 +23,13 @@ p {
   font-size: 24px;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.symptom-form {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.afterSubmit {
+  display: none;
 }
