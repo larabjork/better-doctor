@@ -30,13 +30,28 @@ $(document).ready(function() {
           cleanResponse.data[m].practices[0].accepts_new_patients = "Yes"
         } else if (response.data[m].practices[0].accepts_new_patients === false) {
         cleanResponse.data[m].practices[0].accepts_new_patients = "No"
-      } else {};
-      if (response.data[m].practices[0].website === undefined) {
-        cleanResponse.data[m].practices[0].website = ""
+        } else {};
+        if (response.data[m].practices[0].website === undefined) {
+          cleanResponse.data[m].practices[0].website = ""
+        }
+        let phone = response.data[m].practices[0].phones[0].number;
+        let cleanPhone = formatPhoneNumber(phone);
+        cleanResponse.data[m].practices[0].phones[0].number = cleanPhone
+
+      };
+      return cleanResponse;
+    }
+
+
+    function formatPhoneNumber(phoneNumberString) {
+      let cleaned = ('' + phoneNumberString).replace(/\D/g, '')
+      let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
+      if (match) {
+        return '(' + match[1] + ') ' + match[2] + '-' + match[3]
       }
-    };
-    return cleanResponse;
-  }
+      return phoneNumberString
+    }
+
 
     function getElements(response) {
       let table = document.createElement("table");
