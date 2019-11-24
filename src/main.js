@@ -20,27 +20,52 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
-      let myArray = response;
-      console.log(myArray);//this displays, but not the next console log, so focus here.
-      for (let i = 0; i < myArray.length; i++) {
-        let doctorName = myArray.data[i].profile.first_name;
-        console.log(doctorName);
-        return doctorName
-        $('#first-name').html(doctorName);
-      }
+      for (let i = 0; i < response.data.length; i++) {
+        let table = document.getElementById("results");
+        let row = table.insertRow(0);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        let cell5 = row.insertCell(4);
+        let cell6 = row.insertCell(5);
+        let cell7 = row.insertCell(6);
+        let cell8 = row.insertCell(7);
+        let cell9 = row.insertCell(8);
+        let cell10 = row.insertCell(9);
+        cell1.innerHTML = response.data[i].profile.first_name;
+        cell2.innerHTML = response.data[i].profile.last_name;
+        cell3.innerHTML = response.data[i].practices[0].accepts_new_patients;
+        cell4.innerHTML = response.data[i].practices[0].name;
+        cell5.innerHTML = response.data[i].practices[0].visit_address.street;
+        cell6.innerHTML = response.data[i].practices[0].visit_address.city;
+        cell7.innerHTML = response.data[i].practices[0].visit_address.state;
+        cell8.innerHTML = response.data[i].practices[0].visit_address.zip;
+        cell9.innerHTML = response.data[i].practices[0].phones[0].number;
+        cell10.innerHTML = response.data[i].practices[0].website;
+      };
+      let table = document.getElementById("results");
+      let row = table.insertRow(0);
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      let cell3 = row.insertCell(2);
+      let cell4 = row.insertCell(3);
+      let cell5 = row.insertCell(4);
+      let cell6 = row.insertCell(5);
+      let cell7 = row.insertCell(6);
+      let cell8 = row.insertCell(7);
+      let cell9 = row.insertCell(8);
+      let cell10 = row.insertCell(9);
+      cell1.innerHTML = "First Name";
+      cell2.innerHTML = "Last Name";
+      cell3.innerHTML = "Accepting New Patients?";
+      cell4.innerHTML = "Practice Name";
+      cell5.innerHTML = "Street Address"
+      cell6.innerHTML = "City";
+      cell7.innerHTML = "State";
+      cell8.innerHTML = "Zip";
+      cell9.innerHTML = "Phone";
+      cell10.innerHTML = "Website";
     };
-    $('.confirm-symptom').text(`Sounds like you're looking for help with ${inputtedSymptom}. These medical practitioners have the skills to help you with that.`);
   });
 });
-
-
-// response.data[0].profile.first_name
-// response.data[0].profile.last_name
-// response.data[0].practices[0].accepts_new_patients
-// response.data[0].practices[0].name
-// response.data[0].practices[0].visit_address.street
-// response.data[0].practices[0].visit_address.city
-// response.data[0].practices[0].visit_address.state
-// response.data[0].practices[0].visit_address.zip
-// response.data[0].practices[0].phones[0].number
-// response.data[0].practices[1].website
