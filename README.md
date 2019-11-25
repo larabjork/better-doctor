@@ -23,7 +23,7 @@ _Setup Instructions_
 * This example assumes your API Key is stored in an API_KEY variable. In order to make your applications quick to grade, please follow the example exactly and do not rename your API_KEY variable to something different.
 
 ### Specifications
-These specs were developed based on the assignment description.
+The assignment presented all relevant specs.
 
 
 ### Technologies Used
@@ -33,11 +33,19 @@ Project was written using Google Chrome; no other browsers were tested for compa
 
 ### Project Setup instructions
 1. Ensure that you have Node.js installed; check that **node** (v4.0.x or higher) and **npm** (v.3.6.x or higher) are in place.
-2. You will need an extension or plug-in in your browser that can handle CORS issues. For Google Chrome, use **Allow CORS: Access-Control-Allow-Origin**. After installing it, you will need to click on the gray "C" icon at the right of the toolbar and then, in the pop-up window, click on the "C" logo. When the "C" is orange, it is working.
 2. After cloning the project locally, you can run **npm install -y** to download the necessary dependencies. You can then run **npm run build** to bundle your version of this project. If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
+3. You will need to generate your own API key:
+  * Visit the BetterDoctor API site and click “Get a free API key”.
+  * Place your token in an .env file at the top level of your directory. Name your API key variable API_KEY in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
+  * Include .env in .gitignore.
+4. You will need an extension or plug-in in your browser that can handle CORS issues. For Google Chrome, search for **Allow CORS: Access-Control-Allow-Origin**. After installing it, you will need to click on the gray "C" icon at the right of the toolbar and then, in the pop-up window, click on the "C" logo. When the "C" is orange, it is working.
 
 ### Known Issues and Limitations
-* INSERT AS APPROPRIATE
+* There are no known bugs.
+* For browsers other than Chrome, users will need to determine which CORS-related plug-in is most viable.
+* The application currently has several default values incorporated. With further modifications, these could become options for a user to select desired output.
+  * Number of doctors returned will be <= 10.
+  * Geographic range of search is set to within 15 miles of Portland's coordinates (45.5051 N ,-122.6750 W).
 
 ### License
 This software is licensed under the MIT license.
