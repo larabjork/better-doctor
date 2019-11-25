@@ -19,9 +19,17 @@ $(document).ready(function() {
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);
       let response = await mySymptoms.apiSymptoms(inputtedSymptom);
-      let cleanResponse = cleanUpJSON(response);
-      getElements(cleanResponse);
+        if (typeof response.data != "undefined" && response.data != null && response.data.length != null && response.data.length > 0) {
+          let cleanResponse = cleanUpJSON(response);
+          getElements(cleanResponse);
+        } else {
+          $('.afterSubmit').hide();
+          $('.noResults').show();
+      };
     })();
+
+
+
 
     function cleanUpJSON(response) {
       let cleanResponse = response;
