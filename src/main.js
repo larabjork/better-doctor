@@ -14,12 +14,12 @@ $(document).ready(function() {
     $('.intro').hide();
     $('.afterSubmit').show();
 
+    $("#confirmSymptom").html(inputtedSymptom);
 
     (async () => {
       let mySymptoms = new Symptoms(inputtedSymptom);
       let response = await mySymptoms.apiSymptoms(inputtedSymptom);
       let cleanResponse = cleanUpJSON(response);
-      console.log(cleanResponse);
       getElements(cleanResponse);
     })();
 
@@ -90,5 +90,6 @@ $(document).ready(function() {
       resultsTable.innerHTML = "";
       resultsTable.appendChild(table);
       };
+
     });
   });

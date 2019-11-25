@@ -14,10 +14,14 @@
         <form class="symptom-form">
           <h3>First, tell us what's going on.</h3>
           <select id="symptom">
-            <option>Cold or flu</option>
+            <option>Cold or Flu</option>
             <option>Headache</option>
             <option>Back Pain</option>
             <option>Anxiety</option>
+            <option>Glum</option>
+            <option>Stuttering</option>
+            <option>Slurred Speech</option>
+            <option>Injury</option>
           </select>
           <button type="submit" name="button">Submit</button>
           <br>
@@ -27,18 +31,16 @@
 
       <div class="afterSubmit">
         <h2>BetterDoctor</h2>
-        <h3>Here are nearby practitioners who can help.</h3>
+        <h3>Here are nearby practitioners who can help with <span id="confirmSymptom">.</h3>
         <table id="results" style="width:100%">
         </table>
       </div>
 
+      <div class="noResults">
+        <h2>BetterDoctor</h2>
+        <h3>Hmmm... it looks like your search didn't turn up any results. Would you like to try again, by choosing from a more comprehensive list of symptoms?</h3>
 
-
-
-
-
-
-
+      </div>
 
     </div>
   </body>
