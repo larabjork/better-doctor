@@ -35,7 +35,7 @@ Project was written using Google Chrome; no other browsers were tested for compa
 1. Ensure that you have Node.js installed; check that **node** (v4.0.x or higher) and **npm** (v.3.6.x or higher) are in place.
 2. After cloning the project locally, you can run **npm install -y** to download the necessary dependencies. You can then run **npm run build** to bundle your version of this project. If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
 3. You will need to generate your own API key:
-  * Visit the BetterDoctor API site and click “Get a free API key”.
+  * Visit the BetterDoctor API site (https://developer.betterdoctor.com/) and click "Sign up" to get a free API key.
   * Place your token in an .env file at the top level of your directory. Name your API key variable API_KEY in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
   * Include .env in .gitignore.
 4. You will need an extension or plug-in in your browser that can handle CORS issues. For Google Chrome, search for **Allow CORS: Access-Control-Allow-Origin**. After installing it, you will need to click on the gray "C" icon at the right of the toolbar and then, in the pop-up window, click on the "C" logo. When the "C" is orange, it is working.
